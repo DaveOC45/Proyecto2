@@ -20,6 +20,7 @@ if (isset($_SESSION['username'])){
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="historial.php">Historial</a>
   <a href="../processes/logout.proc.php">Logout</a>
+  <a href="mostrarusuaris.php">Usuaris</a>
 </div>
 <div class="msgopen">
 

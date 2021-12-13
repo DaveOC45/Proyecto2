@@ -13,3 +13,4 @@ class Evento{
         $this->contra_usuari=$contra_usuari;
         $this->tipus_usuari=$tipus_usuari;
 }
+}
