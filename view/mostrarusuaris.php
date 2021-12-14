@@ -46,6 +46,7 @@ if (isset($_SESSION['username'])){
           <tr>
             <td><h1><?php echo $usuari['nom_usuari'];?></h1> </td>
             <td><h1><?php echo $usuari['cognom_usuari'];?></h1></td>
+            <td><h1><?php echo $usuari['tipus_usuari'];?></h1></td>
             <td></td>
           </tr>
             <?php
