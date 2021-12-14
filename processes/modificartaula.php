@@ -14,8 +14,7 @@
     <br>
     <div class="form-group align-items-center">
     <form action="modificartaula.proc.php" method="post">
-        <label for="num_taula">Número de la taula</label>
-        <input type="number" class="form-control" name="num_taula" id="num_taula" value="<?php echo $_GET['num_taula'];?>">
+    <input type="hidden" name="num_taula" id="num_taula" value="<?php echo $_GET['num_taula'];?>">
 
         <label for="num_llocs_taula">Número de llocs de la taula</label>
         <input type="number" class="form-control" name="num_llocs_taula" id="num_llocs_taula" value="<?php echo $_GET['num_llocs_taula'];?>">  
@@ -38,7 +37,6 @@
         <input type="text" class="form-control" name="estat_taula" id="estat_taula" value="<?php echo $_GET['estat_taula'];?>">
 
         <br>
-        <input type="hidden" name="num_taula" id="num_taula" value="<?php echo $_GET['num_taula'];?>">
 
         <input type="submit" class="btn btn-success" value="Actualizar">
     </form>
