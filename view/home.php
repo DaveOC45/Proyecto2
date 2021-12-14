@@ -21,6 +21,7 @@ if (isset($_SESSION['username'])){
   <a href="historial.php">Historial</a>
   <a href="../processes/logout.proc.php">Logout</a>
   <a href="mostrarusuaris.php">Usuaris</a>
+  <a href="mostrartaules.php">Administrar taules</a>
 </div>
 <div class="msgopen">
 
