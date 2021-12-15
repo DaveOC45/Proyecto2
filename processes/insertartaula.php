@@ -7,7 +7,7 @@ $num_taula=$_POST["num_taula"];
 $num_llocs_taula=$_POST["num_llocs_taula"];
 $id_sala=$_POST["id_sala"];
 $estat_taula=$_POST["estat_taula"];
-$taula=new Evento($num_taula,$num_llocs_taula,$id_sala,$estat_taula);
+$taula=new Taula($num_taula,$num_llocs_taula,$id_sala,$estat_taula);
 $stmt = $pdo->prepare("INSERT INTO tbl_taula (num_taula,num_llocs_taula,id_sala,estat_taula) VALUES (:num_taula,:num_llocs_taula,:id_sala,:estat_taula)" );
 try{
     if($stmt->execute((array) $taula)){
