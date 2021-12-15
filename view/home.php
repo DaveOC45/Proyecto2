@@ -22,6 +22,7 @@ if (isset($_SESSION['username'])){
   <a href="../processes/logout.proc.php">Logout</a>
   <a href="mostrarusuaris.php">Usuaris</a>
   <a href="mostrartaules.php">Administrar taules</a>
+  <a href="mostrarsales.php">Administrar sales</a>
 </div>
 <div class="msgopen">
 

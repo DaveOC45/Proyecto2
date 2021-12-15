@@ -1,5 +1,5 @@
 <?php
-class Evento{
+class Taula{
     public $num_taula;
     public $num_llocs_taula;
     public $id_sala;
