@@ -173,12 +173,7 @@ if (isset($_SESSION['username'])){
           </div>
           <div class="parte-mesa  contenedor">
               <?php 
-                if($mesa['estat_taula']==1){
-                  echo "<button type='button' class='boton uno' onclick='window.location.href=`../processes/home2.php?num_taula=".$mesa['num_taula']."&estat_taula=".$mesa['estat_taula']."`'><span>ALLIBERAR</span></button>";
-                }else{
-                  echo "<button type='button' class='boton dos' onclick='window.location.href=`../processes/home2.php?num_taula=".$mesa['num_taula']."&estat_taula=".$mesa['estat_taula']."`'><span>RESERVAR</span></button>";
-                }
-
+                  echo "<button type='button' class='boton dos' onclick='window.location.href=`../processes/reserva-form.php?num_taula={$mesa['num_taula']}`'><span>RESERVAR</span></button>";
               ?>
           </div>
         </div>

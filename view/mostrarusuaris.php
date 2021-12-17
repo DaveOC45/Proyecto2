@@ -42,21 +42,25 @@ if (isset($_SESSION['username'])){
       
         ?>
         
-        <div class="">
+        <div class="usuari">
+          <table>
           <tr>
-            <td><h1><?php echo $usuari['nom_usuari'];?></h1> </td>
+            <br><br><td><h1><?php echo $usuari['nom_usuari'];?></h1> </td>
             <td><h1><?php echo $usuari['cognom_usuari'];?></h1></td>
-            <td><h1><?php echo $usuari['tipus_usuari'];?></h1></td>
-            <td></td>
+            <td><h1><?php echo $usuari['tipus_usuari'];?></h1></td><br>
+            
           </tr>
-            <?php
+          
+          </table>
+          
+        </div>
+        <?php
               echo "<tr>";
               echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarusuari.php?id_usuari={$usuari['id_usuari']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/modificarusuari.php?id_usuari={$usuari['id_usuari']}&nom_usuari={$usuari['nom_usuari']}&cognom_usuari={$usuari['cognom_usuari']}&contra_usuari={$usuari['contra_usuari']}&tipus_usuari={$usuari['tipus_usuari']}'>Actualizar</a></td>";
+              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificarusuari.php?id_usuari={$usuari['id_usuari']}&nom_usuari={$usuari['nom_usuari']}&cognom_usuari={$usuari['cognom_usuari']}&contra_usuari={$usuari['contra_usuari']}&tipus_usuari={$usuari['tipus_usuari']}'>Actualizar</a></td>";
               echo '</tr>';
               
             ?>
-        </div>
         
         <?php
     }

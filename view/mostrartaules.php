@@ -28,11 +28,12 @@ if (isset($_SESSION['username'])){
 <button class="openbtn" onclick="openNav()">&#9776;</button>
 
 <div class="cuerpo-home">
-<?php
-          echo "<td><a type='button' class='btn btn-success'href='../processes/creartaula.php'>Crear taula</a></td>";
-          ?>
+
   
   <div class="mostrar-mesashistorial">
+  <?php
+          echo "<td><a type='button' class='btn btn-success'href='../processes/creartaula.php'>Crear taula</a></td>";
+          ?>
   <?php
       if(!isset($_POST['enviarfiltro'])){
         $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala order by t.estat_taula, t.num_taula;");
@@ -87,6 +88,7 @@ if (isset($_SESSION['username'])){
         ?>
         <div class="mesa">
           <div class="parte-mesa">
+            <br><br>
             <?php 
               if($mesa['estat_taula']==0){
                 ?>
@@ -99,15 +101,10 @@ if (isset($_SESSION['username'])){
               }
               
             ?>
-            <?php
-              echo "<tr>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminartaula.php?num_taula={$mesa['num_taula']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/modificartaula.php?num_taula={$mesa['num_taula']}&num_llocs_taula={$mesa['num_llocs_taula']}&id_sala={$mesa['id_sala']}&estat_taula={$mesa['estat_taula']}'>Actualizar</a></td>";
-              echo '</tr>';
-              
-            ?>
+            
           </div>
-          <div class="parte-mesa">
+          
+          <div class="centrardivxd">
             <h4><?php echo "<br>Taula num. ".$mesa['num_taula']; ?></h4>
             <h6><?php echo "<br>Sala: ".$mesa['nom_sala']; ?></h6>
             <h6><?php echo "<br>Num. de llocs: ".$mesa['num_llocs_taula']; ?></h6>
@@ -119,6 +116,13 @@ if (isset($_SESSION['username'])){
             }
             ?>
           </div>
+          <?php
+              echo "<tr>";
+              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminartaula.php?num_taula={$mesa['num_taula']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
+              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificartaula.php?num_taula={$mesa['num_taula']}&num_llocs_taula={$mesa['num_llocs_taula']}&id_sala={$mesa['id_sala']}&estat_taula={$mesa['estat_taula']}'>Actualizar</a></td>";
+              echo '</tr>';
+              
+            ?>
         </div>
         <?php
       }
