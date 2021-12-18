@@ -48,7 +48,7 @@ if (isset($_SESSION['username'])){
           <tr>
             <br><br>  <td><h1><?php echo $sala['id_sala'];?></h1> </td>
             <td><h1><?php echo $sala['nom_sala'];?></h1></td>
-            <td><img src="<?php echo $sala['img'];?>" alt="" width="250px"></td>
+            <td><img src="../img/<?php echo $sala['img'];?>" alt="" width="250px"></td>
             <td></td>
             <br><br>
           </tr>

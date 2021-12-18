@@ -13,7 +13,9 @@
     <center><h1>Crear sala</h1></center>
     <br>
     <div class="form-group align-items-center">
-    <form action="insertarsala.php" method="post">
+    <form action="insertarsala.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="img" id='img'><br>
+        <input type="hidden" name="id_sala" id='id_sala' value="<?php echo $_GET['id_sala']?>">
         <label for="nom_sala">Nom nova sala</label>
         <input type="text" class="form-control" name="nom_sala" id="nom_sala">
         <br><br>
