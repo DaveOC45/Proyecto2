@@ -15,11 +15,11 @@
     <div class="form-group align-items-center">
     <form action="insertarusuari.php" method="post">
         <label for="nom_usuari">Nom nou usuari</label>
-        <input type="text" class="form-control" name="nom_usuari" id="nom_usuari">
+        <input type="text" class="form-control" name="nom_usuari" id="nom_usuari" required>
         <label for="cognom_usuari">Cognom nou usuari</label>
-        <input type="text" class="form-control" name="cognom_usuari" id="cognom_usuari">
+        <input type="text" class="form-control" name="cognom_usuari" id="cognom_usuari" required>
         <label for="contra_usuari">Contrasenya per usuari en MD5</label>
-        <input type="datetime" class="form-control" name="contra_usuari" id="contra_usuari">  
+        <input type="datetime" class="form-control" name="contra_usuari" id="contra_usuari" required>  
         <label for="tipus_usuari">Usuari cambrer o manteniment?</label>
         <select name="tipus_usuari" id="tipus_usuari">
             <option value="cambrer">cambrer</option>

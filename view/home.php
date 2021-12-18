@@ -78,14 +78,7 @@ if (isset($_SESSION['username'])){
             </select>
           </div>
           <br>
-          <div>
-            <label for="estado" class="fuente">Estat de la taula</label>
-            <select name="estado" id="estado">
-                <option value="ambas" selected>Ambdues</option>
-                <option value="1">Reservada</option>
-                <option value="0">Lliure</option>
-            </select>
-          </div>
+         
           <br>
           <div>
             <input type="submit" name="enviarfiltro" value="BUSCAR">
@@ -100,37 +93,37 @@ if (isset($_SESSION['username'])){
         $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);    
       }else{
             //000
-          if(($_POST['estado']=='ambas') && ($_POST['num_taula']=="*") && $_POST['sala']=='*'){
+          if( ($_POST['num_taula']=="*") && $_POST['sala']=='*'){
               $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala order by t.estat_taula, t.num_taula;");
               $stmt->execute();
               $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);  
           }//100
-          elseif($_POST['estado']!='ambas' && ($_POST['num_taula']=="*") && ($_POST['sala']=='*')){
-              $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where t.estat_taula='".$_POST['estado']."' order by t.estat_taula, t.num_taula;");
+          elseif(($_POST['num_taula']=="*") && ($_POST['sala']=='*')){
+              $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where t.estat_taula='".$_POST['estado']."' order by t.num_taula;");
               $stmt->execute();
               $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);  
           }//110
-          elseif($_POST['estado']!='ambas' && ($_POST['num_taula']!="*") && ($_POST['sala']=='*')){
-            $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where t.estat_taula='".$_POST['estado']."' and t.num_taula='".$_POST['num_taula']."' order by t.estat_taula, t.num_taula;");
+          elseif(($_POST['num_taula']!="*") && ($_POST['sala']=='*')){
+            $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where t.num_taula='".$_POST['num_taula']."' order by t.num_taula;");
             $stmt->execute();
             $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);     
           }//101
-          elseif($_POST['estado']!='ambas' && ($_POST['num_taula']=="*") && ($_POST['sala']!='*')){
-            $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where t.estat_taula='".$_POST['estado']."' and s.nom_sala='".$_POST['sala']."' order by t.estat_taula, t.num_taula;");
+          elseif(($_POST['num_taula']=="*") && ($_POST['sala']!='*')){
+            $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where s.nom_sala='".$_POST['sala']."' order by t.num_taula;");
             $stmt->execute();
             $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);     
           }//010
-          elseif($_POST['estado']=='ambas' && ($_POST['num_taula']!="*") && ($_POST['sala']=='*')){
+          elseif(($_POST['num_taula']!="*") && ($_POST['sala']=='*')){
             $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where t.num_taula='".$_POST['num_taula']."' order by t.estat_taula, t.num_taula;");
             $stmt->execute();
             $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);     
           }//011
-          elseif($_POST['estado']=='ambas' && ($_POST['num_taula']!="*") && ($_POST['sala']!='*')){
+          elseif(($_POST['num_taula']!="*") && ($_POST['sala']!='*')){
             $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where t.num_taula='".$_POST['num_taula']."' and s.nom_sala='".$_POST['sala']."' order by t.estat_taula, t.num_taula;");
             $stmt->execute();
             $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);     
           }//001
-          elseif($_POST['estado']=='ambas' && ($_POST['num_taula']=="*") && ($_POST['sala']!='*')){
+          elseif(($_POST['num_taula']=="*") && ($_POST['sala']!='*')){
             $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala where s.nom_sala='".$_POST['sala']."' order by t.estat_taula, t.num_taula;");
             $stmt->execute();
             $listamesas=$stmt->fetchAll(PDO::FETCH_ASSOC);  
@@ -163,13 +156,7 @@ if (isset($_SESSION['username'])){
             <h4><?php echo "<br>Taula num. ".$mesa['num_taula']; ?></h4>
             <h6><?php echo "<br>Sala: ".$mesa['nom_sala']; ?></h6>
             <h6><?php echo "<br>Num. de llocs: ".$mesa['num_llocs_taula']; ?></h6>
-            <h6><?php 
-            if($mesa['estat_taula']==1){
-              echo "<br>Estat de la taula: <span class='estat-taula-reservada'>Reservada</span></h6>";
-            }else{
-              echo "<br>Estat de la taula: <span class='estat-taula-lliure'>Lliure</span></h6>";
-            }
-            ?>
+            
           </div>
           <div class="parte-mesa  contenedor">
               <?php 

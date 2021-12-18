@@ -13,7 +13,7 @@ $hora = $fecha['hours']." ".$fecha['minutes'];
 if($data_reserva == $fecha && $inici_reserva<$hora){
     session_start();
     $_SESSION['error']=1;
-    header("location: reserva-form.php?num_taula={$num_taula}&error2=error");
+    header("location: ./reserva-form.php?num_taula={$num_taula}&error2=error");
 }else{
 $entrada=strtotime('2 hour',strtotime($inici_reserva));
 $salida = date('H:i',$entrada);

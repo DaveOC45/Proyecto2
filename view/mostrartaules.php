@@ -21,8 +21,11 @@ if (isset($_SESSION['username'])){
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="historial.php">Historial</a>
-  <a href="home.php">Home</a>
   <a href="../processes/logout.proc.php">Logout</a>
+  <a href="home.php">Home</a>
+  <a href="mostrarusuaris.php">Usuaris</a>
+  <a href="mostrartaules.php">Administrar taules</a>
+  <a href="mostrarsales.php">Administrar sales</a>  
 </div>
 
 <button class="openbtn" onclick="openNav()">&#9776;</button>
@@ -87,22 +90,7 @@ if (isset($_SESSION['username'])){
 
         ?>
         <div class="mesa">
-          <div class="parte-mesa">
-            <br><br>
-            <?php 
-              if($mesa['estat_taula']==0){
-                ?>
-                <img class="tamanoimagen" width="100%" src="../img/silla_verde.png" alt="logomesa_libre">
-                <?php
-              }else{
-                ?>
-                <img class="tamanoimagen2" width="100%" src="../img/silla_roja.png" alt="logomesa">
-                <?php
-              }
-              
-            ?>
-            
-          </div>
+          
           
           <div class="centrardivxd">
             <h4><?php echo "<br>Taula num. ".$mesa['num_taula']; ?></h4>

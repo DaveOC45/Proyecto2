@@ -54,8 +54,7 @@ h6 {
 }
 
 .parte-mesa {
-    width: 60%;
-    padding-left: 30%;
+    width: 33.33%;
 }
 
 
@@ -411,6 +410,11 @@ td>* {
 
 .usuari {
     padding-left: 20%;
+    padding-bottom: 10px;
+}
+
+.sala {
+    padding-left: 40%;
     padding-bottom: 10px;
 }
 

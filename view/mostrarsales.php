@@ -20,9 +20,11 @@ if (isset($_SESSION['username'])){
 <body class="historial">
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="historial.php">Historial</a>
-  <a href="home.php">Home</a>
   <a href="../processes/logout.proc.php">Logout</a>
+  <a href="home.php">Home</a>
+  <a href="mostrarusuaris.php">Usuaris</a>
+  <a href="mostrartaules.php">Administrar taules</a>
+  <a href="mostrarsales.php">Administrar sales</a>  
 </div>
 
 <button class="openbtn" onclick="openNav()">&#9776;</button>
@@ -42,24 +44,26 @@ if (isset($_SESSION['username'])){
       
         ?>
         
-        <div class="">
+        <div class="sala">
           <tr>
-            <td><h1><?php echo $sala['id_sala'];?></h1> </td>
+            <br><br>  <td><h1><?php echo $sala['id_sala'];?></h1> </td>
             <td><h1><?php echo $sala['nom_sala'];?></h1></td>
             <td><img src="<?php echo $sala['img'];?>" alt="" width="250px"></td>
             <td></td>
             <br><br>
           </tr>
-          <?php
+          
+            
+        </div>
+        <?php
               echo "<tr>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarsala.php?id_sala={$sala['id_sala']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/modificarsala.php?id_sala={$sala['id_sala']}&nom_sala={$sala['nom_sala']}'>Actualizar</a></td>";
+              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarsala.php?id_sala={$sala['id_sala']}'  onclick=\"return confirm('Estás segur de borrar?')\">Borrar</a></td>";
+              echo "<td><a type='button' class='btn btn-danger' href='../processes/imgsala.php?id_sala={$sala['id_sala']}&nom_sala={$sala['nom_sala']}'  onclick=\"return confirm('¿Estás seguro de insertar imagen?')\">Insertar imagen</a></td>";
+              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificarsala.php?id_sala={$sala['id_sala']}&nom_sala={$sala['nom_sala']}'>Actualizar</a></td>";
 
               echo '</tr>';
               
             ?>
-            
-        </div>
         
         <?php
     }
