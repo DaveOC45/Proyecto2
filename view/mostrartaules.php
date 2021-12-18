@@ -96,13 +96,7 @@ if (isset($_SESSION['username'])){
             <h4><?php echo "<br>Taula num. ".$mesa['num_taula']; ?></h4>
             <h6><?php echo "<br>Sala: ".$mesa['nom_sala']; ?></h6>
             <h6><?php echo "<br>Num. de llocs: ".$mesa['num_llocs_taula']; ?></h6>
-            <h6><?php 
-            if($mesa['estat_taula']==1){
-              echo "<br>Estat de la taula: <span class='estat-taula-reservada'>Reservada</span></h6>";
-            }else{
-              echo "<br>Estat de la taula: <span class='estat-taula-lliure'>Lliure</span></h6>";
-            }
-            ?>
+           
           </div>
           <?php
               echo "<tr>";

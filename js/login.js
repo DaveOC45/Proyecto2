@@ -7,7 +7,7 @@ function validar() {
         alerta.innerHTML = 'Introduce el nombre y la contraseña'
         return false
     } else if (username == '') {
-        alerta.innerHTML = 'Introduce el nombrec'
+        alerta.innerHTML = 'Introduce el nombre'
         return false
     } else if (password == '') {
         alerta.innerHTML = 'Introduce la contraseña'

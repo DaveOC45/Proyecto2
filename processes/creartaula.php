@@ -34,8 +34,6 @@
             <option value="12">Terrassa Guns n Roses</option>
         </select>
         <br><br>
-        <label for="estat_taula">Estat de la taula -> lliure = 0, reservada = 1</label>
-        <input type="number" class="form-control" name="estat_taula" id="estat_taula">
         <br>
         <input type="submit" class="btn btn-success" value="Crear">
     </form>

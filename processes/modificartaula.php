@@ -33,9 +33,6 @@
         </select>
         <br><br>
 
-        <label for="estat_taula">Estat de la taula -> lliure = 0, reservada = 1</label>
-        <input type="text" class="form-control" name="estat_taula" id="estat_taula" value="<?php echo $_GET['estat_taula'];?>">
-
         <br>
 
         <input type="submit" class="btn btn-success" value="Actualizar">
