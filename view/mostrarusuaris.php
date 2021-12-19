@@ -59,7 +59,7 @@ if (isset($_SESSION['username'])){
         </div>
         <?php
               echo "<tr>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarusuari.php?id_usuari={$usuari['id_usuari']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
+              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarusuari.php?id_usuari={$usuari['id_usuari']}&tipus_usuari={$usuari['tipus_usuari']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
               echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificarusuari.php?id_usuari={$usuari['id_usuari']}&nom_usuari={$usuari['nom_usuari']}&cognom_usuari={$usuari['cognom_usuari']}&contra_usuari={$usuari['contra_usuari']}&tipus_usuari={$usuari['tipus_usuari']}'>Actualitzar</a></td>";
               echo '</tr>';
               
