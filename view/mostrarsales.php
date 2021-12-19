@@ -22,6 +22,7 @@ if (isset($_SESSION['username'])){
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="../processes/logout.proc.php">Logout</a>
   <a href="home.php">Home</a>
+  <a href="historial.php">Reservas</a>
   <a href="mostrarusuaris.php">Usuaris</a>
   <a href="mostrartaules.php">Administrar taules</a>
   <a href="mostrarsales.php">Administrar sales</a>  
@@ -48,7 +49,10 @@ if (isset($_SESSION['username'])){
           <tr>
             <br><br>  <td><h1><?php echo $sala['id_sala'];?></h1> </td>
             <td><h1><?php echo $sala['nom_sala'];?></h1></td>
-            <center><td><img src="../img/<?php echo $sala['img'];?>" alt="" width="150px" ></td></center>
+            <div class="alinear">
+            <td ><img src="../img/<?php echo $sala['img'];?>" alt="" width="200px" ></td>
+            </div>
+            
             <td></td>
             <br><br>
           </tr>
@@ -58,7 +62,7 @@ if (isset($_SESSION['username'])){
         <?php
               echo "<tr>";
               echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarsala.php?id_sala={$sala['id_sala']}'  onclick=\"return confirm('Estás segur de borrar?')\">Borrar</a></td>";
-              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificarsala.php?id_sala={$sala['id_sala']}&nom_sala={$sala['nom_sala']}'>Actualizar</a></td>";
+              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificarsala.php?id_sala={$sala['id_sala']}&nom_sala={$sala['nom_sala']}'>Actualitzar</a></td>";
 
               echo '</tr>';
               

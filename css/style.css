@@ -489,3 +489,7 @@ input[type=date],
     width: 100%;
     padding-left: 7%;
 }
+
+.alinear {
+    padding-right: 60%;
+}

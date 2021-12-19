@@ -20,7 +20,7 @@ if (isset($_SESSION['username'])){
 <body class="historial">
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="historial.php">Historial</a>
+  <a href="historial.php">Reservas</a>
   <a href="../processes/logout.proc.php">Logout</a>
   <a href="home.php">Home</a>
   <a href="mostrarusuaris.php">Usuaris</a>
