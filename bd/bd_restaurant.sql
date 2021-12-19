@@ -87,10 +87,8 @@ CREATE TABLE `tbl_usuari` (
 
 INSERT INTO `tbl_usuari` (`id_usuari`, `nom_usuari`, `cognom_usuari`, `contra_usuari`, `tipus_usuari`) VALUES
 (1, 'David', 'Ortega', '1fa3356b1eb65f144a367ff8560cb406', 'manteniment'),
-(3, 'Ivan', 'Aguinaga', '47496afd0bb349059c000e89235b1d87', 'cambrer'),
-(4, 'Daniel', 'Larreaaaaaaaa', '0192023a7bbd73250516f069df18b500', 'cambrer'),
-(5, 'Xavi', 'Gomez', '1fa3356b1eb65f144a367ff8560cb406', 'cambrer'),
-(18, 'Arnau', 'supremo', '1fa3356b1eb65f144a367ff8560cb406', 'manteniment');
+(2, 'Profesor', 'daw2', '1fa3356b1eb65f144a367ff8560cb406', 'manteniment'),
+(3, 'Cambrer', 'daw2', '8af3982673455323883c06fa59d2872a', 'cambrer');
 
 ALTER TABLE `tbl_reserva`
   ADD PRIMARY KEY (`id_reserva`),
