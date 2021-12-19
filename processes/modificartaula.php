@@ -1,19 +1,24 @@
-<?php include_once 'cabecera.html';
-
+<?php 
+session_start();
+include_once 'cabecera.html';
+include '../services/conexion.php';
+if (isset($_SESSION['username'])){
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/style.css"> 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODIFICAR TAULA</title>
 </head>
 <body>
-    <center><h1>Modificar taula</h1></center>
-    <br>
-    <div class="form-group align-items-center">
+    <div class="cuerpo-home">
+    <div class="divformularios">
     <form action="modificartaula.proc.php" method="post">
+    <h1 class="centrartexto">MODIFICAR TAULA</h1><br><br>
     <input type="hidden" name="num_taula" id="num_taula" value="<?php echo $_GET['num_taula'];?>">
 
         <label for="num_llocs_taula">Número de llocs de la taula</label>
@@ -33,13 +38,12 @@
         </select>
         <br><br>
 
-        <label for="estat_taula">Estat de la taula -> lliure = 0, reservada = 1</label>
-        <input type="text" class="form-control" name="estat_taula" id="estat_taula" value="<?php echo $_GET['estat_taula'];?>">
-
         <br>
 
         <input type="submit" class="btn btn-success" value="Actualizar">
     </form>
     </div>
+    </div>
 </body>
 </html>
+<?php } else {header('location:../view/login.php');}?>

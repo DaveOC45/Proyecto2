@@ -1,20 +1,23 @@
-<?php include_once 'cabecera.html';
-
+<?php 
+session_start();
+include_once 'cabecera.html';
+include '../services/conexion.php';
+if (isset($_SESSION['username'])){
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/style.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Taula</title>
 </head>
 <body>
-    <center><h1>Crear Taula</h1></center>
-    <br>
-    <div class="form-group align-items-center">
+    <div class="cuerpo-home">
+    <div class="divformularios">
     <form action="insertartaula.php" method="post">
-
+    <h1 class="centrartexto">CREAR TAULA</h1><br><br>
         <label for="num_taula">Número de la taula</label>
         <input type="number" class="form-control" name="num_taula" id="num_taula">
 
@@ -34,11 +37,11 @@
             <option value="12">Terrassa Guns n Roses</option>
         </select>
         <br><br>
-        <label for="estat_taula">Estat de la taula -> lliure = 0, reservada = 1</label>
-        <input type="number" class="form-control" name="estat_taula" id="estat_taula">
         <br>
         <input type="submit" class="btn btn-success" value="Crear">
     </form>
     </div>
+    </div>
 </body>
 </html>
+<?php } else {header('location:../view/login.php');}?>

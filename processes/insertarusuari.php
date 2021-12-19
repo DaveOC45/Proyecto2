@@ -13,7 +13,7 @@ try{
     if($stmt->execute((array) $usuari)){
         echo 'bien';
         header("location:../view/mostrarusuaris.php");
-    }else{ echo 'mal';}
+    }else{echo 'mal';}
 }catch(PDOException $e){
     echo 'mal manito';
    echo  $e->getMessage();

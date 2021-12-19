@@ -54,7 +54,7 @@ h6 {
 }
 
 .parte-mesa {
-    width: 33.3%;
+    width: 33.33%;
 }
 
 
@@ -404,3 +404,92 @@ td>* {
 
 
 /*-------------*/
+
+
+/*---------PROYECTO2----------*/
+
+.usuari {
+    padding-left: 20%;
+    padding-bottom: 10px;
+}
+
+.sala {
+    padding-left: 40%;
+    padding-bottom: 10px;
+}
+
+.centrardivxd {
+    padding-left: 3%;
+    padding-bottom: 10px;
+}
+
+table {
+    border-width: 3px;
+    border-spacing: 2px;
+    border-style: outset;
+    border-color: black;
+    border-collapse: separate;
+}
+
+td {
+    border-width: 1px;
+    padding: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: peru;
+    border-color: black;
+}
+
+.btn-modificar {
+    color: #fff;
+    background-color: green;
+    border-color: black;
+}
+
+
+/*-----DIA 19------*/
+
+select {
+    width: 57%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.divformularios {
+    width: 25%;
+    background: #22142b;
+    color: white;
+    font-weight: lighter;
+    padding: 15px;
+    border: 3px solid #3b4652;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 10px;
+    margin: 0 0px 25px;
+    opacity: 0.95;
+}
+
+input[type=date],
+[type=text] {
+    background-color: #f1f1f1;
+    border: none;
+    color: #2a2c2d;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: helvetica;
+    width: 260px;
+}
+
+.centrartexto {
+    width: 100%;
+    padding-left: 7%;
+}
+
+.alinear {
+    padding-right: 60%;
+}

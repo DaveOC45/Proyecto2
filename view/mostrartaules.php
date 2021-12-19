@@ -20,19 +20,23 @@ if (isset($_SESSION['username'])){
 <body class="historial">
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="historial.php">Historial</a>
-  <a href="home.php">Home</a>
+  <a href="historial.php">Reservas</a>
   <a href="../processes/logout.proc.php">Logout</a>
+  <a href="home.php">Home</a>
+  <a href="mostrarusuaris.php">Usuaris</a>
+  <a href="mostrartaules.php">Administrar taules</a>
+  <a href="mostrarsales.php">Administrar sales</a>  
 </div>
 
 <button class="openbtn" onclick="openNav()">&#9776;</button>
 
 <div class="cuerpo-home">
-<?php
-          echo "<td><a type='button' class='btn btn-success'href='../processes/creartaula.php'>Crear taula</a></td>";
-          ?>
+
   
   <div class="mostrar-mesashistorial">
+  <?php
+          echo "<td><a type='button' class='btn btn-success'href='../processes/creartaula.php'>Crear taula</a></td>";
+          ?>
   <?php
       if(!isset($_POST['enviarfiltro'])){
         $stmt=$pdo->prepare("SELECT t.num_taula, t.num_llocs_taula, t.id_sala, t.estat_taula, s.nom_sala from tbl_taula t inner join tbl_sala s on t.id_sala=s.id_sala order by t.estat_taula, t.num_taula;");
@@ -86,39 +90,21 @@ if (isset($_SESSION['username'])){
 
         ?>
         <div class="mesa">
-          <div class="parte-mesa">
-            <?php 
-              if($mesa['estat_taula']==0){
-                ?>
-                <img class="tamanoimagen" width="100%" src="../img/silla_verde.png" alt="logomesa_libre">
-                <?php
-              }else{
-                ?>
-                <img class="tamanoimagen2" width="100%" src="../img/silla_roja.png" alt="logomesa">
-                <?php
-              }
-              
-            ?>
-            <?php
-              echo "<tr>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminartaula.php?num_taula={$mesa['num_taula']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/modificartaula.php?num_taula={$mesa['num_taula']}&num_llocs_taula={$mesa['num_llocs_taula']}&id_sala={$mesa['id_sala']}&estat_taula={$mesa['estat_taula']}'>Actualizar</a></td>";
-              echo '</tr>';
-              
-            ?>
-          </div>
-          <div class="parte-mesa">
+          
+          
+          <div class="centrardivxd">
             <h4><?php echo "<br>Taula num. ".$mesa['num_taula']; ?></h4>
             <h6><?php echo "<br>Sala: ".$mesa['nom_sala']; ?></h6>
             <h6><?php echo "<br>Num. de llocs: ".$mesa['num_llocs_taula']; ?></h6>
-            <h6><?php 
-            if($mesa['estat_taula']==1){
-              echo "<br>Estat de la taula: <span class='estat-taula-reservada'>Reservada</span></h6>";
-            }else{
-              echo "<br>Estat de la taula: <span class='estat-taula-lliure'>Lliure</span></h6>";
-            }
-            ?>
+           
           </div>
+          <?php
+              echo "<tr>";
+              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminartaula.php?num_taula={$mesa['num_taula']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
+              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificartaula.php?num_taula={$mesa['num_taula']}&num_llocs_taula={$mesa['num_llocs_taula']}&id_sala={$mesa['id_sala']}&estat_taula={$mesa['estat_taula']}'>Actualitzar</a></td>";
+              echo '</tr>';
+              
+            ?>
         </div>
         <?php
       }
