@@ -1,4 +1,9 @@
 <?php 
+session_start();
+include '../services/conexion.php';
+if (isset($_SESSION['username'])){
+?>
+<?php 
 $num_taula=$_GET['num_taula'];
 ?>
 <!DOCTYPE html>
@@ -67,3 +72,4 @@ $num_taula=$_GET['num_taula'];
                 </div>
 </body>
 </html>
+<?php } else {header('location:../view/login.php');}?>

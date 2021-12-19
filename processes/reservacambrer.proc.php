@@ -1,5 +1,6 @@
 <?php
 require_once '../services/conexion.php';
+
 $nom_reserva=$_POST["nom_reserva"];
 $num_taula=$_POST['num_taula'];
 $data_reserva=$_POST['data_reserva'];

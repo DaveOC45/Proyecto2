@@ -1,4 +1,9 @@
-
+<?php 
+session_start();
+include_once 'cabecera.html';
+include '../services/conexion.php';
+if (isset($_SESSION['username'])){
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,3 +38,4 @@
     
 </body>
 </html>
+<?php } else {header('location:../view/login.php');}?>
