@@ -18,11 +18,8 @@ if (isset($_SESSION['username'])){
 <body>
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="historial.php">Reservas</a>
+  <a href="reservas.php">Reservas</a>
   <a href="../processes/logout.proc.php">Logout</a>
-  <a href="mostrarusuaris.php">Usuaris</a>
-  <a href="mostrartaules.php">Administrar taules</a>
-  <a href="mostrarsales.php">Administrar sales</a>
 </div>
 <div class="msgopen">
 
@@ -36,7 +33,7 @@ if (isset($_SESSION['username'])){
 <h2 id='count2'></h2>
 <div class="cuerpo-home">
   <div class="container-filtros">
-    <form action="home.php" method="post" class="form-filtros">
+    <form action="inici.php" method="post" class="form-filtros">
         <div>
           <h3>Filtrar taules</h3>
         </div>
@@ -160,7 +157,7 @@ if (isset($_SESSION['username'])){
           </div>
           <div class="parte-mesa  contenedor">
               <?php 
-                  echo "<button type='button' class='boton dos' onclick='window.location.href=`../processes/reserva-form.php?num_taula={$mesa['num_taula']}`'><span>RESERVAR</span></button>";
+                  echo "<button type='button' class='boton dos' onclick='window.location.href=`../processes/reserva-formcambrer.php?num_taula={$mesa['num_taula']}`'><span>RESERVAR</span></button>";
               ?>
           </div>
         </div>

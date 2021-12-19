@@ -21,10 +21,7 @@ if (isset($_SESSION['username'])){
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="../processes/logout.proc.php">Logout</a>
-  <a href="home.php">Home</a>
-  <a href="mostrarusuaris.php">Usuaris</a>
-  <a href="mostrartaules.php">Administrar taules</a>
-  <a href="mostrarsales.php">Administrar sales</a>  
+  <a href="inici.php">Home</a> 
 </div>
 
 <button class="openbtn" onclick="openNav()">&#9776;</button>
@@ -83,7 +80,6 @@ if (isset($_SESSION['username'])){
               echo '<br>';
               
             ?>
-        
         <?php
     }
     ?>

@@ -48,7 +48,7 @@ if (isset($_SESSION['username'])){
           <tr>
             <br><br>  <td><h1><?php echo $sala['id_sala'];?></h1> </td>
             <td><h1><?php echo $sala['nom_sala'];?></h1></td>
-            <td><img src="../img/<?php echo $sala['img'];?>" alt="" width="250px"></td>
+            <center><td><img src="../img/<?php echo $sala['img'];?>" alt="" width="150px" ></td></center>
             <td></td>
             <br><br>
           </tr>
@@ -58,7 +58,6 @@ if (isset($_SESSION['username'])){
         <?php
               echo "<tr>";
               echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarsala.php?id_sala={$sala['id_sala']}'  onclick=\"return confirm('Estás segur de borrar?')\">Borrar</a></td>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/imgsala.php?id_sala={$sala['id_sala']}&nom_sala={$sala['nom_sala']}'  onclick=\"return confirm('¿Estás seguro de insertar imagen?')\">Insertar imagen</a></td>";
               echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificarsala.php?id_sala={$sala['id_sala']}&nom_sala={$sala['nom_sala']}'>Actualizar</a></td>";
 
               echo '</tr>';

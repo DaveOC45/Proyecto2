@@ -101,7 +101,7 @@ if (isset($_SESSION['username'])){
           <?php
               echo "<tr>";
               echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminartaula.php?num_taula={$mesa['num_taula']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
-              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificartaula.php?num_taula={$mesa['num_taula']}&num_llocs_taula={$mesa['num_llocs_taula']}&id_sala={$mesa['id_sala']}&estat_taula={$mesa['estat_taula']}'>Actualizar</a></td>";
+              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificartaula.php?num_taula={$mesa['num_taula']}&num_llocs_taula={$mesa['num_llocs_taula']}&id_sala={$mesa['id_sala']}&estat_taula={$mesa['estat_taula']}'>Actualitzar</a></td>";
               echo '</tr>';
               
             ?>

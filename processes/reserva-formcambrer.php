@@ -16,7 +16,7 @@ $num_taula=$_GET['num_taula'];
     <br><br><br><br>
     <div class="cuerpo-home">
     <div class="divformularios">
-    <form action="reserva.proc.php?num_taula=<?php echo $num_taula; ?>" method="POST">
+    <form action="reservacambrer.proc.php?num_taula=<?php echo $num_taula; ?>" method="POST">
                     <h1 class="centrartexto">RESERVAR TAULA</h1><br><br>
                     <input type="hidden"name="num_taula" value="<?php echo $num_taula;?>">
                     <center><input type="text" class="" name="nom_reserva" placeholder="Nom a reservar" required><br><br><br></center>

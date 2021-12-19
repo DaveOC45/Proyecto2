@@ -6,15 +6,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/style.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Taula</title>
 </head>
 <body>
-    <center><h1>Crear Taula</h1></center>
-    <br>
-    <div class="form-group align-items-center">
+    <div class="cuerpo-home">
+    <div class="divformularios">
     <form action="insertartaula.php" method="post">
-
+    <h1 class="centrartexto">CREAR TAULA</h1><br><br>
         <label for="num_taula">Número de la taula</label>
         <input type="number" class="form-control" name="num_taula" id="num_taula">
 
@@ -37,6 +37,7 @@
         <br>
         <input type="submit" class="btn btn-success" value="Crear">
     </form>
+    </div>
     </div>
 </body>
 </html>
