@@ -18,9 +18,7 @@ Si quieres obtener mi proyecto sigue estos pasos:
 
 ### Acceso login
 
-```
 Hosting -> https://proyecto2davidortega.000webhostapp.com/view/login.php
-```
 
 ```
 USUARIO  |  CONTRASEÑA
