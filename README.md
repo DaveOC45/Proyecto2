@@ -56,26 +56,21 @@ $connection = new mysqli("$host", "$usr", "$pwd",$db);
 
 ## Despliegue 📦
 
-Para tener el proyecto ya terminado y dejarlo descansar vamos a subir el proyecto a un Hosting en este caso será el de **000WEBHOST**
-Accedes a la plataforma, creas un sitio gratuito y subes el proyecto a la plataforma. Cambias la conexion a la base de datos ya que serán distintos y hecho. Te dejo el enlace del codigo subido al hosting gratuito: https://doc-brown.000webhostapp.com/
-
+Para desplegar el proyecto deberemos seleccionar un hosting gratuito, ya sea 000webhost o infinityfree por ejemplo. En mi caso utilizaré 000webhost.
+¡En internet hay miles de tutoriales que nos enseñan a desplegar nuestro proyecto!
 ## Construido con 🛠️
 
-    PHP - Lenguaje Nativo
-    MYSQL - Gestor de base de datos
-    CSS - Lenguaje de estilos
-    JavaScript - Lenguage desarollo cliente
-    Bootstrap - Biblioteca de estilos
-    SweetAlet - Biclioteca de alertas JS
-    FontAwesome - Libreria de iconos
+    PHP 
+    JAVASCRIPT
+    MYSQL
+    CSS
 
-## Autores ✒️
+## Autor ✒️
 
-    Xavier Gómez - Desarollador WEB
+    David Ortega Colomo   -   Estudiante DAW2
 
-## Expresiones de Gratitud 🎁
+## Agradeciemientos 🍺
 
-    Si le ha gustado, comparta mi perfil con sus amigos 📢
-    Les dejo mis redes sociales para cualquier contacto 📱
-    -Instagram: @xavier.gomezgallego
-    -Twitter: @xaviermireia1
+    Gracias a los profesores por ayudarme a desarrollar mi tarea cuando estaba colapsado y gracias a mis compañeros por echarme una ayudita
+
+    Si te ha quedado alguna duda sobre el proyecto no dudes en contactarme por correo -> 100006394.joan23@fje.edu
