@@ -13,8 +13,8 @@ Si quieres obtener mi proyecto sigue estos pasos:
 
 ## Pre-requisitos 📋
 
-EDITOR DE CÓDIGO-> VISUAL STUDIO CODE
-INSTALAR XAMPP: https://www.apachefriends.org/es/index.html
+### EDITOR DE CÓDIGO-> VISUAL STUDIO CODE
+### INSTALAR XAMPP: https://www.apachefriends.org/es/index.html
 
 ### Acceso login
 ```
