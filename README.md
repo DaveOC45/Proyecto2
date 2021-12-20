@@ -31,7 +31,7 @@ David y Profesor son admins, mientras que Cambrer solo puede hacer reservas y mi
 -Meter los archivos previamente descargados en c:\xampp\htdocs\www\proyecto2.
 -Tener activados los servicios Apache y MySQL en XAMPP.
 
-NOTA: Este proyecto está pensado para usuarso con phpmyadmin.
+NOTA: Este proyecto está pensado para usarse con phpmyadmin.
 
 ### Crear carpeta dentro de services donde está config.php y poner lo siguiente
 ```
@@ -69,7 +69,7 @@ Para desplegar el proyecto deberemos seleccionar un hosting gratuito, ya sea 000
 
     David Ortega Colomo   -   Estudiante DAW2
 
-## Agradeciemientos 🍺
+## Agradecimientos 🍺
 
     Gracias a los profesores por ayudarme a desarrollar mi tarea cuando estaba colapsado y gracias a mis compañeros por echarme una ayudita
 
