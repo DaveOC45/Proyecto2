@@ -28,11 +28,12 @@ David y Profesor son admins, mientras que Cambrer solo puede hacer reservas y mi
 ```
 
 ## Instalación 🔧
+```
 -Meter los archivos previamente descargados en c:\xampp\htdocs\www\proyecto2.
 -Tener activados los servicios Apache y MySQL en XAMPP.
 
 NOTA: Este proyecto está pensado para usarse con phpmyadmin.
-
+```
 ### Crear carpeta dentro de services donde está config.php y poner lo siguiente
 ```
 <?php
