@@ -10,8 +10,8 @@ $inici_reserva=$_POST["inici_reserva"];
 $fecha = getdate();
 $dia = $fecha['year']."-".$fecha['mon']."-".$fecha['mday'];
 $hora = $fecha['hours'].":00:00";
-
-if($data_reserva < $fecha){
+if($data_reserva < $dia && $inici_reserva<$hora){
+    
     session_start();
     $_SESSION['error']=1;
     header("location: ./modificarreserva-formcambrer.php?id_reserva={$id_reserva}&error2=error");
