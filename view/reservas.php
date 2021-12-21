@@ -73,7 +73,9 @@ if (isset($_SESSION['username'])){
         </div>
         <?php
               echo "<tr>";
-              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarreserva.php?id_reserva={$reserva['id_reserva']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
+              echo "<td><a type='button' class='btn btn-danger' href='../processes/eliminarreservacambrer.php?id_reserva={$reserva['id_reserva']}'  onclick=\"return confirm('¿Estás seguro de borrar?')\">Borrar</a></td>";
+              echo "<td><a type='button' class='btn btn-modificar' href='../processes/modificarreserva-formcambrer.php?id_reserva={$reserva['id_reserva']}&nom_reserva={$reserva['nom_reserva']}&data_reserva={$reserva['data_reserva']}&inici_reserva={$reserva['inici_reserva']}  '>Actualitzar</a></td>";
+
               echo '</tr>';
               echo '<br>';
               echo '<br>';
